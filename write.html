@@ -7,11 +7,13 @@
 <body>
 <form action="index.html" method="post">
 	
+     제목 :  <input type="text" name="title" /><br/>
+     작성자 : <input type="text" name="writer" /><br/>
+     날짜 :  <input type="text" name="regdate" /><br/>
+        <input type="submit" />
 </form>
-제목 : <input type="text" name="title" /><br/>
-작성자 : <input type="text" name="writer" /><br/>
-날짜 : <input type="text" name="regdate" /><br/>
-<input type="submit" />
-
+<script>
+     alert(document.forms[0].title.name);
+</script>
 </body>
 </html>
