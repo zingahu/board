@@ -7,7 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<%
+	int idx = 1;
+	String title = "제목입니다.";
+	String writer = "작성자이름";
+	String regdate = "120610";
+	int count = 10000;
+%>
 	<h1>게시글리스트</h1>
 	<table>
 		<tr>
@@ -18,11 +24,11 @@
 			<th>조히수</th>
 		</tr>
 		<tr>
-			<td>1</td>
-			<td>본격!</td>
-			<td>게시판 짜기</td>
-			<td>오늘</td>
-			<td>9999</td>
+			<td><%=idx %></td>
+			<td><%=title %></td>
+			<td><%=writer %></td>
+			<td><%=regdate %></td>
+			<td><%=count %></td>
 		</tr>
 	</table>
 	<a href="write.html">글쓰기</a>
