@@ -9,10 +9,11 @@
 <body>
 <%
 	int idx = 1;
-	String title = "제목입니다.";
-	String writer = "작성자이름";
-	String regdate = "120610";
+	String title = request.getParameter("title");
+	String writer = request.getParameter("writer");
+	String regdate = request.getParameter("redate");
 	int count = 10000;
+	String content = request.getParameter("content");
 %>
 	<h1>게시글리스트</h1>
 	<table>
