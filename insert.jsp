@@ -1,4 +1,5 @@
 <%@page import="java.util.regex.Pattern"%>
+<%@page import="java.sql.*" %>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -29,6 +30,20 @@
 	    out.println("숫자형식이 아닙니다.");
 	 
 	if(content == "" ||content == null) out.println("content가 null입니다.");
+	
+	try{
+		String driverName = "oracle.jdbc.driver.OracleDriver";//데이터베이스에 접속하기 위한 드라이버 로드
+		String url = "jdbc:oracle:thin:@localhost:1521:XE"; 
+		
+		Class.forName(driverName);
+		Connection con = DriverManager.getConnection(url, "board","board");  //디비 접근정보 , id, pass
+		out.println("Oracle db connected.....success...");
+		con.close();
+	} catch(Exception e){
+		out.println("Oracle db 접속에 문제가 있습니다. <hr>");
+		out.println(e.getMessage());
+		e.printStackTrace();
+	}
 %>
 
 </body>
