@@ -12,7 +12,7 @@
 	
      제목 :  <input type="text" name="title" /><br/>
      작성자 : <input type="text" name="writer" /><br/>
-  cotent: <textarea></textarea><br/>
+  cotent: <textarea name="content"></textarea><br/>
      날짜 :  <input type="text" name="regdate" /><br/>
         <input type="submit" />
 </form>
