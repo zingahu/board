@@ -9,7 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
+<%  
+    request.setCharacterEncoding("euc-kr");
 	int idx = 1;
 	String title = request.getParameter("title");
 	String writer = request.getParameter("writer");
