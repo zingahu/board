@@ -32,6 +32,6 @@
 			<td><%=count %></td>
 		</tr>
 	</table>
-	<a href="write.html">글쓰기</a>
+	<a href="write.jsp">글쓰기</a>
 </body>
 </html>

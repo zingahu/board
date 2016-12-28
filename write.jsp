@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form action="index.jsp" method="post" onsubmit="return formCheck();">
+<form action="insert.jsp" method="post" onsubmit="return formCheck();">
 	
      제목 :  <input type="text" name="title" /><br/>
      작성자 : <input type="text" name="writer" /><br/>
