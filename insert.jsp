@@ -38,6 +38,13 @@
 		Class.forName(driverName);
 		Connection con = DriverManager.getConnection(url, "board","board");  //디비 접근정보 , id, pass
 		out.println("Oracle db connected.....success...");
+		
+		Statement stmt = con.createStatement();
+		String sql = "INSERT INTO BOARD "+
+		             "(IDX, TITLE, WRITER, REGDATE, COUNT, CONTENT) "+
+				     "VALUES("+2+", '"+title+"','" + writer+"', '"  + regdate + "','1', '"+content+"')";
+		stmt.executeUpdate(sql);
+		
 		con.close();
 	} catch(Exception e){
 		out.println("Oracle db 접속에 문제가 있습니다. <hr>");
