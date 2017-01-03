@@ -43,7 +43,7 @@
 		Statement stmt = con.createStatement();
 		String sql = "INSERT INTO BOARD "+
 		             "(IDX, TITLE, WRITER, REGDATE, COUNT, CONTENT) "+
-				     "VALUES("+2+", '"+title+"','" + writer+"', '"  + regdate + "','1', '"+content+"')";
+				     "VALUES( board_seq.nextval', '"+title+"','" + writer+"', '"  + regdate + "','1', '"+content+"')";
 		stmt.executeUpdate(sql);
 		
 		con.close();
