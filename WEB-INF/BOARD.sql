@@ -1,0 +1,18 @@
+CREATE TABLE BOARD(
+IDX NUMBER,
+TITLE VARCHAR2(200) ,
+WRITER VARCHAR2(20),
+REGDATE VARCHAR2(20),
+COUNT NUMBER ,
+CONTENT CLOB,
+PRIMARY KEY(IDX)
+
+)
+
+;
+
+
+select * from board;
+select board
+delete board
+where idx >= 2
