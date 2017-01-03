@@ -45,7 +45,7 @@
 		String sql = "INSERT INTO BOARD "+
 		             "(IDX, TITLE, WRITER, REGDATE, COUNT, CONTENT) "+
 				     "VALUES( board_seq.nextval, '"+title+"','" + writer+"', sysdate, "+count+", '"+content+"')";
-		out.println(sql);
+		//out.println(sql);
 		stmt.executeUpdate(sql);
 		
 		con.close();
@@ -53,6 +53,9 @@
 		out.println("Oracle db 접속에 문제가 있습니다. <hr>");
 		out.println(e.getMessage());
 		e.printStackTrace();
+	}
+	finally{
+		out.print("<script>location.href='index.jsp';</script>");
 	}
 %>
 
