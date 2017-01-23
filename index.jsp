@@ -49,7 +49,7 @@
 			out.print("<td>" + rs.getString("title") + "</td>");		
 			out.print("<td>" + rs.getString("writer") + "</td>");		
 			out.print("<td>" + rs.getString("regdate") + "</td>");		
-			out.print("<td>" + rs.getString("cont") + "</td>");	
+			out.print("<td>" + rs.getString("count") + "</td>");	
 			out.print("</tr>");
 		}	
 	
