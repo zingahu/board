@@ -46,7 +46,7 @@
 		while(rs.next()){
 			out.print("<tr>");
 			out.print("<td>" + rs.getString("idx") + "</td>");		
-			out.print("<td>" + rs.getString("title") + "</td>");		
+			out.print("<td> <a href='content.jsp'>" + rs.getString("title") +" </a></td>");		
 			out.print("<td>" + rs.getString("writer") + "</td>");		
 			out.print("<td>" + rs.getString("regdate") + "</td>");		
 			out.print("<td>" + rs.getString("count") + "</td>");	
