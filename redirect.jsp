@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <script>
-	localhost.href="index.jsp";
+	location.href="index.jsp";
 </script>
 <body>
 
