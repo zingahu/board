@@ -6,22 +6,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>본격! 게시판 - 게시글 조회</title>
 </head>
 	<%
 		String idx = request.getParameter("idx");
 		try{
-			String driverName = "oracle.jdbc.dirver.OracleDriver";
-			String url = "jdbc:oracle:thin:localhost:1521:XE";
+			String driverName = "oracle.jdbc.driver.OracleDriver";
+			String url = "jdbc:oracle:thin:@localhost:1521:XE";
 			ResultSet rs = null;
 			
 			Class.forName(driverName);
 			Connection con = DriverManager.getConnection(url,"board","board");
 			
+			out.println("Oracle Database Connection Success.");
+
 			Statement stmt = con.createStatement();
 			String sql = "select * from board where idx = " + idx;
 			rs = stmt.executeQuery(sql);
-			
+
 			while(rs.next()){
 		%>	
 		
@@ -49,13 +51,13 @@
 		</tr>
 				
 	</table>
-	<a href="delete.jsp?idx=<%=rs.getString("idx") %>">게시글삭제</a>
+	<a href="delete.jsp?idx=<%=rs.getString("idx")%>">게시글삭제</a>
 	<a href="index.jsp">목록으로</a>
 
 <%
-		}
-	
-		con.close();
+			}
+		
+			con.close();
 		}catch(Exception e){
 			out.println("Oracle Database Connection Something Problem. <hr>");
 			out.println(e.getMessage());
