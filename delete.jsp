@@ -31,7 +31,7 @@
 %>
 <script>
 	alert("게시글이 삭제 되었습니다.");
-	location.href="index.jsp";
+	location.href="redirect.jsp";
 	
 </script>
 <body>
