@@ -19,11 +19,9 @@
 			Connection con = DriverManager.getConnection(url,"board","board");
 			
 			out.println("Oracle Database Connection Success.");
-
 			Statement stmt = con.createStatement();
 			String sql = "select * from board where idx = " + idx;
 			rs = stmt.executeQuery(sql);
-
 			while(rs.next()){
 		%>	
 		
