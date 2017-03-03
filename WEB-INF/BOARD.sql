@@ -16,3 +16,7 @@ select * from board;
 select board
 delete board
 where idx >= 2
+
+CREATE SEQUENCE  "BOARD_SEQ"  MINVALUE 1 MAXVALUE 99999999 INCREMENT BY 1
+
+select board_seq.currval from dual
