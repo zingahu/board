@@ -1,3 +1,24 @@
+CREATE TABLESPACE BOARD
+ DATAFILE 'D:\007_ORA_DATA\BOARD.dbf' SIZE 300M
+ DEFAULT STORAGE 
+ ( INITIAL    500K
+  NEXT      10K
+  MINEXTENTS 2
+  MAXEXTENTS 50
+  PCTINCREASE 50);
+  
+  DROP TABLESPACE SOP_TOGA_V6 INCLUDING CONTENTS;
+  drop user BOARD cascade
+  
+  
+create user board
+ identified by board
+ default tablespace board;
+
+grant connect,resource to board;
+grant create table, create sequence, create view TO board;
+
+
 CREATE TABLE BOARD(
 IDX NUMBER,
 TITLE VARCHAR2(200) ,
